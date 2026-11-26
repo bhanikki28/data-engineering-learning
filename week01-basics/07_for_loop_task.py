@@ -39,3 +39,21 @@ for row in rows:
         ok_count += 1
 
 print(f"The total ok_count is {ok_count}, missing_count is {missing_count} , invalid_count is {invalid_count}")
+
+
+secret = 7
+guess_count = 0
+# keep asking until the guess equals secret
+# print "Too high" / "Too low" each time
+# at the end: "Correct! You took N guesses"
+guess = None
+while guess != secret:
+    guess = int(input("Please guess the number : "))
+    guess_count += 1
+    if guess > secret:
+        print("Too High")
+    elif guess < secret:
+        print("Too Low")
+    continue
+
+print(f"You have made {guess_count} no of guesses")
